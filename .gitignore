@@ -1,6 +1,6 @@
 .DS_Store
 /src/node_modules
 /src/.next
-/out
+/src/out
 npm-debug.log
 yarn-error.log

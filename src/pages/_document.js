@@ -1,20 +1,52 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import GlobalWrapper from '../components/GlobalWrapper'
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }) {
+  static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
     const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
-    const styleTags = sheet.getStyleElement()
+
+    const styleTags = (
+      <style
+        amp-custom=""
+        dangerouslySetInnerHTML={{
+          __html: sheet.getStyleElement().reduce(
+            (
+              css,
+              {
+                props: {
+                  dangerouslySetInnerHTML: {
+                    __html = '',
+                  } = {},
+                } = {},
+              } = {},
+            ) => (
+              `${css}${__html}`
+            ),
+            '',
+          ),
+        }}
+      />
+    )
+
     return { ...page, styleTags }
   }
 
-  render () {
+  render() {
+    const {
+      styleTags,
+    } = this.props
+
+    GlobalWrapper()
     return (
       <html>
         <Head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
           <title>My page</title>
-          {this.props.styleTags}
+          {styleTags}
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
         </Head>
         <body>
           <Main />
