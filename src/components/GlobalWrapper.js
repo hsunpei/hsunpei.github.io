@@ -7,7 +7,8 @@ const GlobalWrapper = () => injectGlobal`
 
   body {
     background-color: ${colors.lightGray};
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     margin: 0;
     line-height: 1.65;
   }
@@ -15,6 +16,10 @@ const GlobalWrapper = () => injectGlobal`
   a {
     color: ${colors.mainColor};
     text-decoration: none;
+  }
+
+  h1 {
+    font-weight: 600;
   }
 `
 

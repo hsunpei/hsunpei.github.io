@@ -1,6 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import GlobalWrapper from '../components/GlobalWrapper'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -9,7 +8,6 @@ export default class MyDocument extends Document {
 
     const styleTags = (
       <style
-        amp-custom=""
         dangerouslySetInnerHTML={{
           __html: sheet.getStyleElement().reduce(
             (
@@ -38,7 +36,6 @@ export default class MyDocument extends Document {
       styleTags,
     } = this.props
 
-    GlobalWrapper()
     return (
       <html>
         <Head>
@@ -46,7 +43,7 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
           <title>My page</title>
           {styleTags}
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:300,600" rel="stylesheet" />
         </Head>
         <body>
           <Main />

@@ -1,8 +1,10 @@
+import Markdown from 'react-remarkable'
 import React from 'react'
 import styled from 'styled-components'
+import SelfIntro from '../text/self-intro'
 import { colors } from '../styles/variables'
 import mq from '../styles/media-queries'
-import Markdown from 'react-remarkable'
+import GlobalWrapper from '../components/GlobalWrapper'
 
 const Title = styled.h1`
   color: ${colors.darkText};
@@ -20,18 +22,9 @@ const Container = styled.div`
   `}
 `
 
-const test = `
-## Reasons React is great
-
-  1. Server-side rendering
-  2. This totally works:
-
-See my [About](/about/) page for details.
-Pretty neat!
-`
-
 class Home extends React.Component {
   render() {
+    GlobalWrapper()
     return (
       <Container>
         <Title>My page</Title>
@@ -40,10 +33,11 @@ class Home extends React.Component {
 
         {/* Or pass it as children */}
         {/* You can nest React components, too */}
-        <Markdown source={test} options={{ linkTarget: '_blank' }} />
+        <Markdown source={SelfIntro} options={{ linkTarget: '_blank' }} />
       </Container>
     )
   }
 }
+
 
 export default Home
