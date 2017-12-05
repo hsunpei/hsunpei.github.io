@@ -20,7 +20,7 @@ module.exports = {
               speed: 4,
             },
             gifsicle: {
-              interlaced: false,
+              interlaced: true,
               optimizationLevel: 2,
             },
             // the webp option will enable WEBP
