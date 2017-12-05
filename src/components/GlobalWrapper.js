@@ -1,6 +1,6 @@
 import styledNormalize from 'styled-normalize'
 import { injectGlobal } from 'styled-components'
-import { colors } from '../styles/variables'
+import { colors, fontWeight } from '../styles/variables'
 
 const GlobalWrapper = () => injectGlobal`
   ${styledNormalize}
@@ -8,7 +8,7 @@ const GlobalWrapper = () => injectGlobal`
   body {
     background-color: ${colors.lightGray};
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: ${fontWeight.normal};
     margin: 0;
     line-height: 1.65;
   }
@@ -19,7 +19,7 @@ const GlobalWrapper = () => injectGlobal`
   }
 
   h1 {
-    font-weight: 600;
+    font-weight: ${fontWeight.bold};
   }
 `
 
