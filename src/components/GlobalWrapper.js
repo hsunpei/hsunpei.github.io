@@ -13,6 +13,12 @@ const GlobalWrapper = () => injectGlobal`
     line-height: 1.65;
   }
 
+  p {
+    ::selection {
+      background: ${colors.mainColor};
+    }
+  }
+
   a {
     color: ${colors.mainColor};
     text-decoration: none;

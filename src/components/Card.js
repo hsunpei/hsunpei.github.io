@@ -3,6 +3,7 @@ import mq from '../styles/media-queries'
 import { colors, animations, fontSize, fontWeight } from '../styles/variables'
 
 const CardWrapper = styled.div`
+  display: inline-block;
   padding: 0.4rem 0.32rem;
 
   ${mq.lessThan('mobile')`
