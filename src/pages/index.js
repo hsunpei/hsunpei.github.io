@@ -1,6 +1,7 @@
 import Markdown from 'react-remarkable'
 import React from 'react'
 import styled from 'styled-components'
+import Masonry from 'react-masonry-component'
 import SelfIntro from '../text/self-intro'
 import Card from '../components/Card'
 import { colors } from '../styles/variables'
@@ -31,6 +32,10 @@ const WorkWrapper = styled.div`
   width: 100%;
 `
 
+const masonryOptions = {
+  transitionDuration: 0.5,
+}
+
 class Home extends React.Component {
   render() {
     GlobalWrapper()
@@ -45,8 +50,11 @@ class Home extends React.Component {
           <Markdown source={SelfIntro} options={{ linkTarget: '_blank' }} />
         </IntroBox>
         <WorkWrapper>
-          <Card />
-          <Card />
+          <Masonry options={masonryOptions}>
+            <Card />
+            <Card />
+            <Card />
+          </Masonry>
         </WorkWrapper>
       </Container>
     )
