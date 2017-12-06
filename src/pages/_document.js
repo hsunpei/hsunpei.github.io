@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
           <title>My page</title>
           {styleTags}
-          <link href="https://fonts.googleapis.com/css?family=Roboto:300,600" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" />
         </Head>
         <body>
           <Main />

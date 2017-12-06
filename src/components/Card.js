@@ -6,6 +6,7 @@ import { colors, animations, fontSize, fontWeight } from '../styles/variables'
 
 const CardWrapper = styled.div`
   display: inline-block;
+  vertical-align: top;
   padding: 0.4rem 0.32rem;
 
   ${mq.lessThan('mobile')`

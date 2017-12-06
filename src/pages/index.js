@@ -5,7 +5,8 @@ import Masonry from 'react-masonry-component'
 import SelfIntro from '../text/self-intro'
 import { workList } from '../text/list-of-work'
 import Card from '../components/Card'
-import { colors } from '../styles/variables'
+import Contact from '../components/Contact'
+import { colors, fontSize } from '../styles/variables'
 import mq from '../styles/media-queries'
 import GlobalWrapper from '../components/GlobalWrapper'
 import { map } from 'lodash'
@@ -27,11 +28,16 @@ const Container = styled.div`
 
 const Title = styled.h1`
   color: ${colors.darkText};
-  font-size: 50px;
+  font-size: ${fontSize.superLarge};
+
+  ${mq.lessThan('mobile')`
+    font-size: ${fontSize.large};
+  `}
 `
 
 const IntroBox = styled.div`
   max-width: 40rem;
+  margin-bottom: 3rem;
 `
 
 const WorkWrapper = styled.div`
@@ -52,11 +58,8 @@ class Home extends React.Component {
     return (
       <Container>
         <IntroBox>
-          <Title>My page</Title>
-          {/* Pass Markdown source to the `source` prop */}
-          <Markdown source="**Markdown is awesome!**" />
-          {/* Or pass it as children */}
-          {/* You can nest React components, too */}
+          <Title>HsunPei Wang <nobr>(王珣沛)</nobr></Title>
+          <Contact />
           <Markdown source={SelfIntro} options={{ linkTarget: '_blank' }} />
         </IntroBox>
         <WorkWrapper>

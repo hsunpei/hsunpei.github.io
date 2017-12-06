@@ -7,13 +7,13 @@ const GlobalWrapper = () => injectGlobal`
 
   body {
     background-color: ${colors.lightGray};
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', helvetica, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
     font-weight: ${fontWeight.normal};
     margin: 0;
     line-height: 1.65;
   }
 
-  p {
+  p, h1 {
     ::selection {
       background: ${colors.lightGreen};
     }

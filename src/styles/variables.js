@@ -1,6 +1,6 @@
 export const colors = {
   lightGray: '#fcfefe',
-  aquaGray: '#9fb5c4',
+  aquaGray: '#8ca1b0',
   mainColor: '#28cc90',
   lightGreen: 'rgba(119, 252, 203, 0.55)',
   darkText: '#101935',
@@ -10,11 +10,13 @@ export const colors = {
 export const fontSize = {
   small: '14px',
   normal: '16px',
+  large: '32px',
+  superLarge: '45px',
 }
 
 export const fontWeight = {
   normal: 300,
-  bold: 600,
+  bold: 400,
 }
 
 export const animations = {
