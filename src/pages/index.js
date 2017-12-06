@@ -3,10 +3,16 @@ import React from 'react'
 import styled from 'styled-components'
 import Masonry from 'react-masonry-component'
 import SelfIntro from '../text/self-intro'
+import { workList } from '../text/list-of-work'
 import Card from '../components/Card'
 import { colors } from '../styles/variables'
 import mq from '../styles/media-queries'
 import GlobalWrapper from '../components/GlobalWrapper'
+import { map } from 'lodash'
+
+const _ = {
+  map,
+}
 
 const Container = styled.div`
   max-width: 62rem;
@@ -38,6 +44,10 @@ const masonryOptions = {
 
 class Home extends React.Component {
   render() {
+    const WorkList = _.map(workList, (work) => {
+      return (<Card key={work.alt} {...work} />)
+    })
+
     GlobalWrapper()
     return (
       <Container>
@@ -51,9 +61,7 @@ class Home extends React.Component {
         </IntroBox>
         <WorkWrapper>
           <Masonry options={masonryOptions}>
-            <Card />
-            <Card />
-            <Card />
+            {WorkList}
           </Masonry>
         </WorkWrapper>
       </Container>

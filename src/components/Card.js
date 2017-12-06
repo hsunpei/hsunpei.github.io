@@ -1,5 +1,7 @@
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import mq from '../styles/media-queries'
+import { getDateString } from '../utils/date'
 import { colors, animations, fontSize, fontWeight } from '../styles/variables'
 
 const CardWrapper = styled.div`
@@ -82,23 +84,50 @@ const Date = styled.span`
   }
 `
 
-const Card = () => {
+const Card = (props) => {
+  const { imgSize } = props
   return (
     <CardWrapper>
       <WhiteCard>
-        <a href="https://www.twreporter.org/a/eng-animal-protection" target="_blank" rel="noopener noreferrer">
+        <a href={props.link} target="_blank" rel="noopener noreferrer">
           <ImageWrapper>
-            <img alt="animal-protection" width="640" height="387" src="/static/thereporter/animal-protection.gif" />
+            <img alt={props.alt} width={imgSize.width} height={imgSize.height} src={props.image} />
           </ImageWrapper>
           <p>
-            <span>No-Kill Policy - The New Paradise for Homeless Animals?</span>
-            <OrgTag>The Reporter Taiwan</OrgTag>
-            <Date>Nov 2016</Date>
+            <span>{props.title}</span>
+            <OrgTag>{props.organization}</OrgTag>
+            <Date>{getDateString(props.month, props.year)}</Date>
           </p>
         </a>
       </WhiteCard>
     </CardWrapper>
   )
+}
+
+
+Card.defaultProps = {
+  link: false,
+  alt: null,
+  imgSize: {
+    width: 500,
+    height: 500,
+  },
+  image: 0,
+  title: 0,
+  organization: 0,
+  month: 1,
+  year: 2017,
+}
+
+Card.propTypes = {
+  link: PropTypes.string,
+  alt: PropTypes.string,
+  imgSize: PropTypes.object,
+  image: PropTypes.string,
+  title: PropTypes.string,
+  organization: PropTypes.string,
+  month: PropTypes.number,
+  year: PropTypes.number,
 }
 
 export default Card
