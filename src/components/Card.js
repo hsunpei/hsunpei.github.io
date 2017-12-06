@@ -61,7 +61,8 @@ const ImageWrapper = styled.div`
   width: 100%;
 
   img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 `
 
@@ -87,7 +88,7 @@ const Card = () => {
       <WhiteCard>
         <a href="https://www.twreporter.org/a/eng-animal-protection" target="_blank" rel="noopener noreferrer">
           <ImageWrapper>
-            <img alt="animal-protection" src="/static/thereporter/animal-protection.gif" />
+            <img alt="animal-protection" width="640" height="387" src="/static/thereporter/animal-protection.gif" />
           </ImageWrapper>
           <p>
             <span>No-Kill Policy - The New Paradise for Homeless Animals?</span>
