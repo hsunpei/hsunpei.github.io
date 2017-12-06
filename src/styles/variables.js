@@ -2,6 +2,7 @@ export const colors = {
   lightGray: '#fcfefe',
   aquaGray: '#9fb5c4',
   mainColor: '#28cc90',
+  lightGreen: 'rgba(40, 204, 144, 0.36)',
   darkText: '#101935',
   white: '#ffffff',
 }

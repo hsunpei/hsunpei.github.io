@@ -15,7 +15,7 @@ const GlobalWrapper = () => injectGlobal`
 
   p {
     ::selection {
-      background: ${colors.mainColor};
+      background: ${colors.lightGreen};
     }
   }
 

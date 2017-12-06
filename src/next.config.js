@@ -1,3 +1,7 @@
+const cfg = require('./config')
+
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
   webpack: (config, { dev }) => {
     config.module.rules.push({
@@ -31,6 +35,12 @@ module.exports = {
         },
       ],
     })
+
+    // add an asset prefix for exporting the assets
+    if (isProd) {
+      config.output.publicPath = `${cfg.appConfig.assetPrefix}${config.output.publicPath}`; // affects 'chunks'
+    }
+
     return config
   },
 

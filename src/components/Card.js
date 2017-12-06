@@ -10,7 +10,7 @@ const CardWrapper = styled.div`
     padding: 0.5rem 0;
   `}
 
-  ${mq.between('mobile', 'desktop')`
+  ${mq.between('mobile', 'tablet')`
     padding: 0.28rem 0.2rem;
   `}
 `
@@ -22,7 +22,7 @@ const WhiteCard = styled.div`
   border-radius: 3px;
   padding: 0;
   max-width: 100%;
-  width: 19.6rem;
+  width: 19.3rem;
   margin: 0;
   overflow: hidden;
   line-height: 1.5;
@@ -35,7 +35,7 @@ const WhiteCard = styled.div`
     padding: 0;
   `}
 
-  ${mq.between('mobile', 'large')`
+  ${mq.between('mobile', 'tablet')`
     width: 14.7rem;
   `}
 
