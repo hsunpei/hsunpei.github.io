@@ -1,6 +1,6 @@
 export const workList = [
   {
-    title: 'No-Kill Policy - The New Paradise for Homeless Animals?',
+    title: 'No-Kill Policy - The New Paradise for Homeless Animals? (零安樂死政策 流浪動物的新天堂樂園？)',
     alt: 'animal-protection',
     link: 'https://www.twreporter.org/a/eng-animal-protection',
     image: '/static/thereporter/animal-protection.gif',
@@ -71,7 +71,7 @@ export const workList = [
     image: '/static/thereporter/homofamily-15cards.jpg',
     imgSize: {
       width: 1290,
-      height: 786,
+      height: 690,
     },
     organization: 'The Reporter Taiwan',
     month: 5,
@@ -110,10 +110,65 @@ export const workList = [
     image: '/static/thereporter/20160222.jpg',
     imgSize: {
       width: 1200,
-      height: 739,
+      height: 554,
     },
     organization: 'The Reporter Taiwan',
     month: 2,
     year: 2016,
+  },
+]
+
+export const volunteerList = [
+  {
+    title: '[Chinese] 2016 Taiwan Election Dashboard: Candidates Who Pledge to Support Marriage Equality',
+    alt: 'election2016',
+    link: 'http://election2016.tapcpr.org/',
+    image: '/static/tapcpr/election2016.jpg',
+    imgSize: {
+      width: 1200,
+      height: 1643,
+    },
+    organization: 'TAPCPR',
+    month: 12,
+    year: 2015,
+  },
+  {
+    title: '[Chinese] Official Website of Taiwan Alliance to Promote Civil Partnership Rights (TAPCPR)',
+    alt: 'tapcpr',
+    link: 'https://tapcpr.org/',
+    image: '/static/tapcpr/tapcpr.jpg',
+    imgSize: {
+      width: 1200,
+      height: 690,
+    },
+    organization: 'TAPCPR',
+    month: 6,
+    year: 2015,
+  },
+  {
+    title: '[Chinese] KissMarriageEquality.org: Official Website for "Marriage Equality Revolution Front"',
+    alt: 'kissmarriageequality',
+    link: 'http://kissmarriageequality.org/',
+    image: '/static/tapcpr/kissmarriageequality.jpg',
+    imgSize: {
+      width: 1401,
+      height: 1230,
+    },
+    organization: 'TAPCPR',
+    month: 10,
+    year: 2014,
+  },
+  {
+    title: '[Chinese] PinkDot TW: Official Website of PinkDot Taiwan',
+    alt: 'pinkdottw',
+    link: 'http://pinkdottw.berryvoice.org/',
+    image: '/static/tapcpr/pinkdottw.jpg',
+    imgSize: {
+      width: 1200,
+      height: 699,
+    },
+    organization: 'Pinkdot TW',
+    month: 5,
+    year: 2015,
   },
 ]

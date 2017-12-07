@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import { appConfig } from '../config'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -37,13 +38,15 @@ export default class MyDocument extends Document {
     } = this.props
 
     return (
-      <html>
+      <html lang="en">
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-          <title>My page</title>
+          <meta name="description" content={appConfig.description} />
+          <title>{appConfig.siteName}</title>
           {styleTags}
           <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" />
+          <link rel="icon" href="/static/favicon.png" type="image/x-icon" />
         </Head>
         <body>
           <Main />

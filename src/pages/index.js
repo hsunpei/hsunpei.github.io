@@ -3,9 +3,10 @@ import React from 'react'
 import styled from 'styled-components'
 import Masonry from 'react-masonry-component'
 import SelfIntro from '../text/self-intro'
-import { workList } from '../text/list-of-work'
+import { workList, volunteerList } from '../text/list-of-work'
 import Card from '../components/Card'
 import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 import { colors, fontSize, fontWeight } from '../styles/variables'
 import mq from '../styles/media-queries'
 import GlobalWrapper from '../components/GlobalWrapper'
@@ -74,24 +75,30 @@ const WorkWrapper = styled.div`
 
 const masonryOptions = {
   transitionDuration: 0.5,
+  // horizontalOrder: true,
+}
+
+const getCards = (list) => {
+  return _.map(list, (work) => {
+    return (<Card key={work.alt} {...work} />)
+  })
 }
 
 class Home extends React.Component {
   render() {
-    const WorkList = _.map(workList, (work) => {
-      return (<Card key={work.alt} {...work} />)
-    })
+    const WorkList = getCards(workList)
+    const VolunteerList = getCards(volunteerList)
 
     GlobalWrapper()
     return (
-      <Container>
-        <Title>HsunPei Wang <nobr>(王珣沛)</nobr></Title>
+      <Container itemScope itemType="http://schema.org/Person">
+        <Title><span itemProp="name">HsunPei Wang</span> <nobr>(王珣沛)</nobr></Title>
         <IntroBox>
           <Contact />
           <Markdown source={SelfIntro} options={{ linkTarget: '_blank' }} />
         </IntroBox>
         <WorkWrapper>
-          <Subtitle>List of Work</Subtitle>
+          <Subtitle>List of Works</Subtitle>
           <Masonry options={masonryOptions}>
             {WorkList}
           </Masonry>
@@ -99,9 +106,10 @@ class Home extends React.Component {
         <WorkWrapper>
           <Subtitle>Volunteer Projects</Subtitle>
           <Masonry options={masonryOptions}>
-            {WorkList}
+            {VolunteerList}
           </Masonry>
         </WorkWrapper>
+        <Footer />
       </Container>
     )
   }

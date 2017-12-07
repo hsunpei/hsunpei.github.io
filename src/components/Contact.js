@@ -68,7 +68,7 @@ const Contact = () => {
         </a>
       </LinkWrapper>
       <LinkWrapper>
-        <a href="https://www.linkedin.com/in/hsun-pei-wang-9355b553/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/hsun-pei-wang/" target="_blank" rel="noopener noreferrer">
           <IconWrapper><LinkedInIcon /></IconWrapper>
         </a>
       </LinkWrapper>
