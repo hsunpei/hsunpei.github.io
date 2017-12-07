@@ -1,6 +1,7 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import { appConfig } from '../config'
+import { colors } from '../styles/variables'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -37,12 +38,22 @@ export default class MyDocument extends Document {
       styleTags,
     } = this.props
 
+    const ogImgUrl = `${appConfig.url}/static/home_og_img.jpg`
+
     return (
       <html lang="en">
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+          <link rel="canonical" href={appConfig.url} />
           <meta name="description" content={appConfig.description} />
+          <meta name="theme-color" content={colors.mainColor} />
+          <meta property="og:title" content={appConfig.title} />
+          <meta property="og:description" content={appConfig.description} />
+          <meta property="og:image" content={ogImgUrl} />
+          <meta name="twitter:title" content={appConfig.title} />
+          <meta name="twitter:description" content={appConfig.description} />
+          <meta name="twitter:image" content={ogImgUrl} />
           <title>{appConfig.siteName}</title>
           {styleTags}
           <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" />
