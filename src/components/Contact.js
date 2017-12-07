@@ -7,8 +7,12 @@ import GmailIcon from '../static/gmail.svg'
 import { colors } from '../styles/variables'
 
 const ContactWrapper = styled.div`
-  margin-left: -0.20rem;
+  margin-left: 0.15rem;
   padding-bottom: 0.5rem;
+
+  ${mq.lessThan('mobile')`
+    margin-left: -0.15rem;
+  `}
 `
 
 const LinkWrapper = styled.div`
@@ -18,7 +22,7 @@ const LinkWrapper = styled.div`
   display: inline-block;
 
   ${mq.lessThan('mobile')`
-    margin-right: 1.6rem;
+    margin-right: 1.7rem;
   `}
 
   a {

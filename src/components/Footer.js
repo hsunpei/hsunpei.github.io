@@ -18,7 +18,7 @@ const ContactWrapper = styled.footer`
 const Footer = () => {
   return (
     <ContactWrapper>
-      <p>2017 | Designed by HsunPei Wang.
+      <p>2017 |  &nbsp;Designed by HsunPei Wang. &nbsp;
         <nobr>Implemented using React.js, Next.js</nobr>
       </p>
     </ContactWrapper>

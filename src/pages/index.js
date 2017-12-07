@@ -91,12 +91,14 @@ class Home extends React.Component {
 
     GlobalWrapper()
     return (
-      <Container itemScope itemType="http://schema.org/Person">
-        <Title><span itemProp="name">HsunPei Wang</span> <nobr>(王珣沛)</nobr></Title>
-        <IntroBox>
+      <Container>
+        <div itemScope itemType="http://schema.org/Person">
+          <Title><span itemProp="name">HsunPei Wang</span> <nobr>(王珣沛)</nobr></Title>
           <Contact />
-          <Markdown source={SelfIntro} options={{ linkTarget: '_blank' }} />
-        </IntroBox>
+          <IntroBox itemProp="description">
+            <Markdown source={SelfIntro} options={{ linkTarget: '_blank' }} />
+          </IntroBox>
+        </div>
         <WorkWrapper>
           <Subtitle>List of Works</Subtitle>
           <Masonry options={masonryOptions}>
