@@ -6,14 +6,14 @@ const GlobalWrapper = () => injectGlobal`
   ${styledNormalize}
 
   body {
-    background-color: ${colors.lightGray};
+    background: linear-gradient(to bottom, rgba(253,253,252,1) 0%, rgba(247,248,246,1) 100%);
     font-family: 'Roboto', helvetica, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
     font-weight: ${fontWeight.normal};
     margin: 0;
     line-height: 1.65;
   }
 
-  p, h1 {
+  p, h1, h2 {
     ::selection {
       background: ${colors.lightGreen};
     }
@@ -25,7 +25,7 @@ const GlobalWrapper = () => injectGlobal`
   }
 
   h1 {
-    font-weight: ${fontWeight.bold};
+    font-weight: ${fontWeight.normal};
   }
 `
 

@@ -6,14 +6,19 @@ import LinkedInIcon from '../static/linkedin.svg'
 import GmailIcon from '../static/gmail.svg'
 import { colors } from '../styles/variables'
 
+const ContactWrapper = styled.div`
+  margin-left: -0.20rem;
+  padding-bottom: 0.5rem;
+`
+
 const LinkWrapper = styled.div`
   color: ${colors.aquaGray};
   margin-left: 0.3rem;
-  margin-right: 1.2rem;
+  margin-right: 1.35rem;
   display: inline-block;
 
   ${mq.lessThan('mobile')`
-    margin-right: 1.5rem;
+    margin-right: 1.6rem;
   `}
 
   a {
@@ -56,7 +61,7 @@ const IconWrapper = styled.div`
 
 const Contact = () => {
   return (
-    <div>
+    <ContactWrapper>
       <LinkWrapper>
         <a href="mailto:garfieldduck@nytimes.com">
           <IconWrapper><GmailIcon /></IconWrapper>
@@ -72,7 +77,7 @@ const Contact = () => {
           <IconWrapper><GithubIcon /></IconWrapper>
         </a>
       </LinkWrapper>
-    </div>
+    </ContactWrapper>
   )
 }
 

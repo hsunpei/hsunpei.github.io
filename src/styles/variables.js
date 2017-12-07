@@ -10,6 +10,9 @@ export const colors = {
 export const fontSize = {
   small: '14px',
   normal: '16px',
+  normalPlus: '20px',
+  medium: '23px',
+  xMedium: '26px',
   large: '32px',
   superLarge: '45px',
 }

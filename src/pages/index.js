@@ -6,7 +6,7 @@ import SelfIntro from '../text/self-intro'
 import { workList } from '../text/list-of-work'
 import Card from '../components/Card'
 import Contact from '../components/Contact'
-import { colors, fontSize } from '../styles/variables'
+import { colors, fontSize, fontWeight } from '../styles/variables'
 import mq from '../styles/media-queries'
 import GlobalWrapper from '../components/GlobalWrapper'
 import { map } from 'lodash'
@@ -35,9 +35,37 @@ const Title = styled.h1`
   `}
 `
 
+const Subtitle = styled.h2`
+  position: relative;
+  color: ${colors.mainColor};
+  font-size: ${fontSize.xMedium};
+  font-weight: ${fontWeight.normal};
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+
+  ${mq.lessThan('mobile')`
+    font-size: ${fontSize.medium};
+  `}
+
+  &:after {
+    content: " /";
+    opacity: 0.6;
+    font-size: ${fontSize.normalPlus};
+    width: 1.3rem;
+    height: 100%;
+    color: ${colors.aquaGray};
+    top: -0.6rem;
+  }
+`
+
 const IntroBox = styled.div`
   max-width: 40rem;
+  margin-left: 0.3rem;
   margin-bottom: 3rem;
+
+  ${mq.lessThan('mobile')`
+    margin-left: 0;
+  `}
 `
 
 const WorkWrapper = styled.div`
@@ -57,12 +85,19 @@ class Home extends React.Component {
     GlobalWrapper()
     return (
       <Container>
+        <Title>HsunPei Wang <nobr>(王珣沛)</nobr></Title>
         <IntroBox>
-          <Title>HsunPei Wang <nobr>(王珣沛)</nobr></Title>
           <Contact />
           <Markdown source={SelfIntro} options={{ linkTarget: '_blank' }} />
         </IntroBox>
         <WorkWrapper>
+          <Subtitle>List of Work</Subtitle>
+          <Masonry options={masonryOptions}>
+            {WorkList}
+          </Masonry>
+        </WorkWrapper>
+        <WorkWrapper>
+          <Subtitle>Volunteer Projects</Subtitle>
           <Masonry options={masonryOptions}>
             {WorkList}
           </Masonry>
