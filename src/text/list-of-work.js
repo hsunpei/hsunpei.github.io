@@ -13,7 +13,7 @@ export const workList = [
     year: 2016,
   },
   {
-    title: '[Chinese] Tracking Promises Related to Labor Policies Made by President Tsai (蔡英文勞動政策追蹤平台)',
+    title: '[Chinese] The Stagnation of Growth in the Minimum Wage of Taiwan (到了 2018 年才 22K！曾經凍漲十年的基本工資)',
     alt: 'min-wage-draft',
     link: 'https://www.twreporter.org/i/min-wage-draft',
     image: '/static/thereporter/min-wage-draft.gif',
