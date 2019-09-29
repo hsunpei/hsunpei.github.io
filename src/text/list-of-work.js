@@ -1,5 +1,18 @@
 export const workList = [
   {
+    title: 'React-Scrolly - Open source library to create scroll-based interactions',
+    alt: 'animal-protection',
+    link: 'https://github.com/garfieldduck/react-scrolly',
+    image: '/static/react-scrolly.jpg',
+    imgSize: {
+      width: 1143,
+      height: 638,
+    },
+    organization: 'Self project',
+    month: 5,
+    year: 2019,
+  },
+  {
     title: 'No-Kill Policy - The New Paradise for Homeless Animals? (零安樂死政策 流浪動物的新天堂樂園？)',
     alt: 'animal-protection',
     link: 'https://www.twreporter.org/a/eng-animal-protection',

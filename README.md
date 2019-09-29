@@ -14,14 +14,14 @@ cd with-styled-components
 Install it and run:
 
 ```bash
-npm install
-npm run dev
+yarn install
+yarn dev
 ```
 
-Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
+Deploy it to Github:
 
 ```bash
-now
+yarn build
 ```
 
 ## The idea behind the example
