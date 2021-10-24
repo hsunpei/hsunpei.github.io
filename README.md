@@ -14,6 +14,7 @@ cd with-styled-components
 Install it and run:
 
 ```bash
+cd src
 yarn install
 yarn dev
 ```
@@ -24,8 +25,7 @@ Deploy it to Github:
 yarn build
 ```
 
-Move the content from `/src/out` to the outer folder.
-
+Move the content from `/src/out` to the outer
 
 ## The idea behind the example
 
