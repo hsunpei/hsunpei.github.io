@@ -2,7 +2,7 @@ export const workList = [
   {
     title: 'React-Scrolly - Open source library to create scroll-based interactions',
     alt: 'animal-protection',
-    link: 'https://github.com/garfieldduck/react-scrolly',
+    link: 'https://github.com/hsunpei/react-scrolly',
     image: '/static/react-scrolly.jpg',
     imgSize: {
       width: 1143,

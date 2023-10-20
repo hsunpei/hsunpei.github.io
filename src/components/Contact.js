@@ -67,7 +67,7 @@ const Contact = () => {
   return (
     <ContactWrapper>
       <LinkWrapper>
-        <a href="mailto:garfieldduck@nytimes.com">
+        <a href="mailto:hsunpei@gmail.com">
           <IconWrapper><GmailIcon /></IconWrapper>
         </a>
       </LinkWrapper>
@@ -77,7 +77,7 @@ const Contact = () => {
         </a>
       </LinkWrapper>
       <LinkWrapper>
-        <a href="https://github.com/garfieldduck" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/hsunpei" target="_blank" rel="noopener noreferrer">
           <IconWrapper><GithubIcon /></IconWrapper>
         </a>
       </LinkWrapper>
